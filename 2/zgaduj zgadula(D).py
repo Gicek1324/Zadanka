@@ -2,10 +2,10 @@
 import random
 
 x = random.randint(1,10)
-y = 0
+z = 0
 
-while y < 3:
-    y += 1
+while z < 3:
+    z += 1
     y = int(input("spróbuj zgadnąć liczbę od 1 do 10 "))
     
     if y > x:
