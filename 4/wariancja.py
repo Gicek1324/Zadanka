@@ -1,3 +1,4 @@
+
 #skończone
 def calc_avg_var(input_list):
     average = 0 
@@ -5,12 +6,12 @@ def calc_avg_var(input_list):
   
     
     for n in input_list:
-        average += n / len(input_list)
-        
+        average += n 
+    average /=  len(input_list)   
     for i in input_list:
-        variance +=(average-i)**2 / len(input_list)
+        variance +=(average-i)**2 
   
-    return(average,variance)
+    return(average, variance / len(input_list))
 
 def main():
     solution_1 = calc_avg_var([3,3,3,3])
