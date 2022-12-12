@@ -1,0 +1,9 @@
+1.
+Napisz funkcję liczącą iloczyn skalarny dwóch wektorów (tablic jednowymiarowych) liczb rzeczywistych. Funkcja ma otrzymać dwie tablice oraz ich rozmiar i zwrócić wartość ich iloczynu skalarnego (czyli sumy iloczynów odpowiadających sobie elementów - pierwszy razy pierwszy, drugi razy drugi itd.). W programie głównym wylicz i wypisz iloczyn skalarny wektorów:
+{1.0,2.0,3.0,4.0,5.0} i {6.0,7.0,8.0,9.0,10.0}
+{0.0,2.0,3.0} i {0.0,7.0,0.0}
+Odpowiednie tablice wypełnij wartościami przy ich definiowaniu.
+2.
+Napisz program (nie osobną funkcję) dodający do siebie dwie macierze z liczbami całkowitymi (tablice 2-wymiarowe) o rozmiarze ROWxCOL (ROW i COL do zdefiniowania przez #define - proszę oby liczba wierszy była różna od liczby kolumn). Wynikiem ma być trzecia macierz o tym samym rozmiarze. Element (i,j) macierzy wynikowej to suma elementów (i,j) dodawanych macierzy. Wartości sumowanych macierzy należy podać przy deklaracji (dowolne liczby całkowite). Macierz wynikową wypisz po sumowaniu wypisz macierz wynikową (w osobnych pętlach, nie przy wyliczaniu sum).
+3.
+Napisz program (nie osobną funkcję) mnożący dwie macierze liczb rzeczywistych (tablice 2-wymiarowe) o rozmiarach ROW1xCOL1 i ROW2xCOL2 (COL1, COL2, ROW1, ROW2 należy zdefiniować  przez #define - przy czym COL1 musi być równe ROW2). Wynikiem ma być trzecia macierz o rozmiarze ROW1xCOL2. Element (i,j) macierzy wynikowej to iloczyn skalarny i-tego wiersza pierwszej macierzy przez j-tą kolumnę drugiej macierzy. Wartości mnożonych macierzy należy podać przy deklaracji, można to zrobić zgodnie z przykładem "Obliczanie_z_definicji" ze strony: Wikipedii (pozwoli to sprawdzić wynik). Po obliczeniach wypisz macierz wynikową.
