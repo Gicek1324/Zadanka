@@ -1,4 +1,4 @@
-//skończne
+//bdb
 #include <stdio.h>
 #define ROW 3
 #define COL 4
