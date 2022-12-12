@@ -1,4 +1,5 @@
-//skończne
+//+db
+//kom: miały być liczby rzeczywiste
 #include <stdio.h>
 #define ROW1 2
 #define COL1 3
