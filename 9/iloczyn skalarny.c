@@ -1,4 +1,4 @@
-//skończne
+//bdb
 #include <stdio.h>
 float scalarProduct(float vec1[], float vec2[], int lenght)
 {
