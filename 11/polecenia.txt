@@ -1,0 +1,23 @@
+1.
+Napisz funkcję, która stworzy dynamicznie tablicę o długości podanej przez argument wywołania i zwróci adres zaalokowanej pamięci (czyli stworzoną tablicę).
+Ponadto w funkcji tablica powinna zostać wypełniona kolejnymi, nieparzystymi liczbami całkowitymi (począwszy od 1). Wypełniając tablicę proszę używać notacji tablicowej a nie wskaźnikowej.
+Funkcję należy użyć w main-ie do utworzenia tablicy o rozmiarze podanym z klawiatury, następnie tablicę należy wypisać na ekranie.
+Wypisując tablicę proszę używać notacji wskaźnikowej a nie tablicowej (tak, aby w tym zadaniu użyć obu notacji).
+Proszę pamiętać o zwalnianiu pamięci przydzielonej dynamicznie.
+Funkcje do zarządzania pamięcią zazwyczaj są opisane w pliku stdlib.h (należy go dołączyć czyli 'zainkludować')
+
+2.
+Napisz funkcję
+double * add(double* tab, int n, double new_elem);
+która powiększa przekazaną  n-elementową tablicę o jeden element new_elem (umieszczany na końcu powiększonej tablicy). Funkcja zwraca powiększoną tablicę (adres nowo przydzielonej pamięci) lub NULL w wypadku niepowodzenia. Wywołanie funkcji powinno polegać na tym, że dostaje ona jako argument wskaźnik ('starą tablicę'), a zwraca adres ('nową tablicę') który jest przypisywany do tego samego wskaźnika, który był argumentem. W ten sposób wskaźnik 'przełącza się' ze 'starej tablicy' na 'nową'.
+
+Funkcja powinna zostać wywołana 10-krotnie w programie głównym (main) celem utworzenia tablicy 10-cio elementowej, która następnie ma zostać wypisana.  W main wskaźnik, który stanie się powiększaną tablicą, należy ustawić wstępnie na NULL.
+
+W tworzonej funkcji proszę nie używać funkcji realloc().
+
+W zadaniu proszę użyć notacji tablicowej i nie używać iteratorów.
+
+
+UWAGI:
+
+Kolejność działań funkcji: przydzielenie pamięci o 1 większej od n, przepisanie zawartości tablicy do nowo przydzielonego miejsca, zwolnienie pamięci tablicy (starej), zwrócenie wskaźnika na nowo przydzieloną pamięć (nowej tablicy).
