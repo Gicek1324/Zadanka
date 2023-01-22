@@ -1,0 +1,45 @@
+1. Kompresja tablicy rzadkiej (sparse array) (O)
+
+Napisz funkcję
+int * compress(double ** adr_table, int *adr_size)
+która kompresuje tablicę rzadką. Tablica rzadka to tablica, której większość elementów to zera. Jedna z możliwych reprezentacji takiej tablicy w postaci upakowanej to tablica elementów niezerowych oraz towarzysząca jej tablica indeksów tych elementów w oryginalnej tablicy (rzadkiej).
+
+Przykładowo - rzadka tablica o wartościach:
+
+0.0  0.0  3.0  0.0  0.0  1.0  0.0  0.0  7.0  0.0
+
+będzie reprezentowana za pomocą dwóch tablic:
+
+3.0  1.0  7.0
+
+2  5  8
+
+ 
+
+Funkcja compress ma tworzyć taką reprezentację. Jej parametrami są: adres tablicy rzadkiej oraz adres rozmiaru tablicy. Funkcja zwraca:
+
+- nowy rozmiar (bez zer) poprzez wrzucenie go pod adres adr_size
+
+- upakowaną tablicę poprzez wrzucenie jej  pod adres adr_table
+
+- tablicę indeksów poprzez return
+
+Funkcja powinna wyliczyć nowy rozmiar, zaalokować odpowiednie tablice, wypełnić je, zwolnić tablicę rzadką w jej miejsce 'wstawiając' tablicę upakowaną oraz zwrócić pozostałe dane (nowy rozmiar i tablicę indeksów).
+
+Przy czym przy obliczaniu nowego rozmiaru do alokacji w pętli proszę 'przechodzić' po elementach iteratorem (wskaźnikiem), natomiast w pętli wypełniającej tablice  - indeksem.
+
+W wypadku niepowodzenia alokacji funkcja zwraca NULL nie zwalniając pamięci tablicy rzadkiej.
+
+W main należy dynamicznie stworzyć rzadką tablicę 10-cio elementową  i wypełnić ją danymi z przykładu:
+
+tab[2]=3.0, tab[5]=1.0, tab[8]=7.0;
+
+Następnie należy wypisać tablicę rzadką, wywołać funkcję compress i wypisać obie zwracane tablice.
+
+UWAGI:
+
+a) W main tablica musi być alokowana dynamicznie - w przeciwnym razie  funkcja compress  będzie próbowała zwolnić pamięć przydzielaną statycznie i program zostanie 'wyrzucony'
+
+b) Funkcja otrzymuje jako parametr adres tablicy. Tak więc odwołanie do elementu tablicy przekazanej przez adres będzie wyglądało:
+
+(*adr_table)[i] - najpierw trzeba wyłuskać (wyciągnąć) tablicę spod adresu, a dopiero potem można odwoływać się do jej i-tego elementu. Nawiasy ( ) są konieczne, bo nawiasy [ ] są silniejsze od * (zapis *adr_table[i] oznaczałby, że adr_table jest tablicą wskaźników i wyłuskujemy to, na co wskazuje jej i-ty element).
