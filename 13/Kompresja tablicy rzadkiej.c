@@ -1,3 +1,10 @@
+//ocena: dst
+//kom: for (int i = 0; i < *adr_size; i++) -- pierwsza pętla miała używać iterator a nie indeks \\
+//if (compressed == NULL || indices == NULL)
+//return NULL; -- brak zwolnienia zaalokowanej pamięci
+//double *tab = (double*) malloc(sizeof(double) * size); -brak spr. NULL
+//int *indices = compress(&tab, &size); -brak spr. NULL
+
 #include <stdio.h>
 #include <stdlib.h>
 
