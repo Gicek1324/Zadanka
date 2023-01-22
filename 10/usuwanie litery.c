@@ -1,5 +1,15 @@
-//jeszcze nie ocenił
-//uważajcie bo rozwiązanie jest dość specyficzne więc moze sie kapnąć 
+//ocena: db
+//kom: char *napis = malloc(100); -brak sprawdznia czy alokacja się udała
+//Poza tym dlaczego nie dał Pan statycznej tablicy? Takie było polecenie w treści zadania.
+//Poniższe jest bardzo istotne, ale:
+//for(int k = i; *(n + k) != '\0'; k++)
+//{
+//*(n + k) = *(n + k + 1);
+//} -- czy notacja wskaźnikowa jest dla Pana czytelniejsza? Dla mnie lepiej wygląda:
+//for(int k = i; n[k] != '\0'; k++)
+//{
+//n[k] = n[k + 1];
+//}
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
